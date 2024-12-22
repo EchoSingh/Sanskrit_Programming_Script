@@ -1,6 +1,4 @@
-📝 **README for Script Interpreter**
-
-Welcome to the **Script Interpreter** project! 🚀
+## Welcome to the **Script Interpreter** project! 🚀
 
 This project allows you to interpret a simple script written in a custom language with keywords in Sanskrit. It supports variable assignment, arithmetic operations, conditionals, and print statements.
 
