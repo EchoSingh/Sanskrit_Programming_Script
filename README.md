@@ -50,5 +50,5 @@ This project allows you to interpret a simple script written in a custom languag
      Operations: Perform operations like addition (yojay), subtraction (hrasam), etc.
      Print Statements: Use pradarshayati to print output.
 ### 📚 **License**:
-     This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
  
