@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/github/EchoSingh/EchoSingh.svg)](https://wakatime.com/badge/github/EchoSingh/EchoSingh)
 ## Welcome to the **Script Interpreter** project! 🚀
 
 This project allows you to interpret a simple script written in a custom language with keywords in Sanskrit. It supports variable assignment, arithmetic operations, conditionals, and print statements.
