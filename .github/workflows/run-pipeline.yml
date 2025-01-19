@@ -63,3 +63,4 @@ jobs:
         git push https://github.com/EchoSingh/Sanskrit_Programming_Script.git HEAD:master
       env:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+ 
