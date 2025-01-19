@@ -35,8 +35,18 @@ jobs:
         mkdir -p screenshots
         ./Script_Interpreter/program < input/input.txt > Screenshots/output.svg
 
+    - name: Check SVG Output
+      run: |
+        if [ ! -f Screenshots/output.svg ]; then
+          echo "SVG output not generated!"
+          exit 1
+        fi
+
+    - name: List Files in Screenshots
+      run: ls -l Screenshots
+
     - name: Upload SVG Output
       uses: actions/upload-artifact@v3
       with:
         name: svg-screenshots
-        path: screenshots
+        path: Screenshots
