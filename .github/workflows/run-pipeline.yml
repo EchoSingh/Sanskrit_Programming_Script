@@ -25,7 +25,7 @@ jobs:
         
     - name: Compile Lexer and Parser
       run: |
-        cd src
+        cd Script_Interpreter
         flex lexer.l
         bison -d parser.y
         gcc -o program parser.tab.c lex.yy.c -lm
@@ -33,7 +33,7 @@ jobs:
     - name: Run Program
       run: |
         mkdir -p screenshots
-        ./src/program < input/input.txt > Screenshots/output.svg
+        ./Script_Interpreter/program < input/input.txt > Screenshots/output.svg
 
     - name: Upload SVG Output
       uses: actions/upload-artifact@v3
