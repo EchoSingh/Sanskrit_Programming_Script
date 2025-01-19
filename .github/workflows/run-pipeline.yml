@@ -33,8 +33,10 @@ jobs:
     - name: Prepare Screenshots Directory
       run: mkdir -p Screenshots
 
-    - name: Run Program
-      run: ./Script_Interpreter/program < input/input.txt > Screenshots/output.svg
+    - name: Run Program and Capture Output
+      run: |
+        ./Script_Interpreter/program < input/input.txt > Screenshots/output.svg
+        cat Screenshots/output.svg  # Print the contents of the output.svg to the logs
 
     - name: Check SVG Output
       run: |
