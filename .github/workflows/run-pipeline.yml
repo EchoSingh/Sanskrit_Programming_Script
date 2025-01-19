@@ -50,3 +50,11 @@ jobs:
       with:
         name: svg-screenshots
         path: Screenshots
+
+    - name: Commit and Push SVG to Repository
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add Screenshots/
+        git commit -m "Add generated SVG file to Screenshots folder"
+        git push origin master
