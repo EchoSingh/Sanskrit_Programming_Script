@@ -1,0 +1,41 @@
+name: Lexer-Parser Pipeline
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set Up Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y flex bison gcc make
+        
+    - name: Compile Lexer and Parser
+      run: |
+        flex lexer.l
+        bison -d parser.y
+        gcc -o program parser.tab.c lex.yy.c -lm
+        
+    - name: Run Program
+      run: |
+        mkdir -p screenshots
+        ./src/program < input/input.txt > Screenshots/output.svg
+
+    - name: Upload SVG Output
+      uses: actions/upload-artifact@v3
+      with:
+        name: svg-screenshots
+        path: screenshots
