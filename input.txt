@@ -1,19 +1,12 @@
-// Define variables
 x = 10
-y = 5
-
-// Perform operations
+y = 20
 z = x yojay y
-pradarshayati("z mulya : ")
-pradarshayati(z)
+pradarshayati ("The sum is:")
+pradarshayati (z)
 
-// Conditional example
-yadi (z adhikam 12)
-    pradarshayati("z adhikam 12")
-athava
-    pradarshayati("z nyunam va samanam 12")
+a = 50
+b = 25
+pradarshayati ("Difference:")
+pradarshayati (a hrasam b)
 
-// Loop example
-paryantam (i = 1, i nyunam 5, i = i yojay 1)
-    pradarshayati("Gananasya sankhya : ")
-    pradarshayati(i)
+pradarshayati ("Namaste from the program!")
