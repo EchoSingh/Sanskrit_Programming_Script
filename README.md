@@ -14,10 +14,7 @@ This project introduces a unique **Script Interpreter** that leverages the beaut
 3. **Step 3: Provide Input in `input.txt`**  
    Write your desired command or input in the `input.txt` file.  
 
-4. **Step 4: Run the Workflow**  
-   Execute the GitHub Actions workflow directly from the repository.  
-
-5. **Step 5: View Output in `output.txt`**  
+4. **Step 5: View Output in `output.txt`**  
    The program’s output will be automatically saved in the `output.txt` file for easy access.  
 
 ### 🛠 **Features**:
