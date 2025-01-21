@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - input.txt
+      - /input.txt
   pull_request:
     branches:
       - main
     paths:
-      - input.txt
+      - /input.txt
 
 jobs:
   build-and-run:
