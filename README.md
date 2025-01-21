@@ -17,11 +17,6 @@ This project allows you to interpret a simple script written in a custom languag
 - **Subtraction** ➖ (hrasam)
 - **Multiplication** ✖️ (gunam)
 - **Division** ➗ (bhagam)
-- **Comparison** 🔍 (adhikam, nyunam, samanam, vyatyasam)
-- **Logical Negation** ❌ (nasti)
-- **Conditionals** ⬇️ (yadi, athava)
-- **Loops** 🔄 (punaravrtti, paryantam)
-- **Print statements** 🖨️ (pradarshayati)
 
 ### **ScreenShots**:
    ![Screenshot](Screenshots/output.jpg)
