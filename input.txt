@@ -8,5 +8,4 @@ a = 50
 b = 25
 pradarshayati ("Difference:")
 pradarshayati (a hrasam b)
-
 pradarshayati ("Namaste from the program!")
