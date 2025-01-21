@@ -1,1 +1,4 @@
-
+x = 10
+y = 9
+z = x yojay y
+pradarshayati("z mulya : ")
