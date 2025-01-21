@@ -3,10 +3,8 @@ y = 20
 z = x yojay y
 pradarshayati ("The sum is:")
 pradarshayati (z)
-
 a = 50
 b = 25
 pradarshayati ("Difference:")
 pradarshayati (a hrasam b)
-
 pradarshayati ("Namaste from the program!")
