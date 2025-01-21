@@ -1,3 +1,6 @@
 कार्यक्रमः आरभ्यताम्। स्वस्यं कोडं लिखत।।
-"z mulya : "
-उत्तरम्: 19
+"The sum is:"
+उत्तरम्: 30
+"Difference:"
+उत्तरम्: 25
+"Namaste from the program!"
