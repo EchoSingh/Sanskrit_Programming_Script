@@ -1,1 +1,57 @@
+name: Lexer-Parser Pipeline
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set Up Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y flex bison gcc make
+
+    - name: Compile Lexer and Parser
+      run: |
+        cd Script_Interpreter
+        flex lexer.l
+        bison -d parser.y
+        gcc -o program parser.tab.c lex.yy.c -lm
+
+    - name: Run Program and Capture Text Output
+      run: |
+        ./src/program < input.txt > output.txt
+        cat output.txt  # Print the text output to the logs
+
+    - name: Check Text Output
+      run: |
+        if [ ! -f output.txt ]; then
+          echo "Text output not generated!"
+          exit 1
+        fi
+
+    - name: Upload Text Output as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: text-output
+        path: output.txt
+
+    - name: Commit and Push Output to Repository
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add output.txt
+        git commit -m "Add generated text output file"
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
