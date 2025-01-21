@@ -23,7 +23,7 @@ jobs:
 
     - name: Compile Lexer and Parser
       run: |
-        cd Script_Interpreter
+        cd src
         flex lexer.l
         bison -d parser.y
         gcc -o program parser.tab.c lex.yy.c -lm
