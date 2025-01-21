@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - input.txt  # Trigger only if input.txt changes
+      - input.txt
   pull_request:
     branches:
       - main
     paths:
-      - input.txt  # Trigger only if input.txt changes
+      - input.txt
 
 jobs:
   build-and-run:
@@ -34,7 +34,7 @@ jobs:
 
     - name: Run Program and Capture Text Output
       run: |
-        ./src/program < input.txt > output.txt  # Updated to use root-level input.txt
+        ./src/program < input.txt > output.txt
         cat output.txt  # Print the text output to the logs
 
     - name: Check Text Output
@@ -48,13 +48,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: text-output
-        path: output.txt  # Path is now relative to the root directory
+        path: output.txt
 
     - name: Commit and Push Output to Repository
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add output.txt
+        git add .  # Stage all modified files (including src/parser.tab.c and src/program)
         git commit -m "Add generated text output file"
         git push origin main
       env:
