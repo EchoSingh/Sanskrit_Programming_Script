@@ -34,12 +34,12 @@ jobs:
 
     - name: Run Program and Capture Text Output
       run: |
-        ./src/program < src/input.txt > src/output.txt
-        cat src/output.txt  # Print the text output to the logs
+        ./src/program < input.txt > output.txt
+        cat output.txt  # Print the text output to the logs
 
     - name: Check Text Output
       run: |
-        if [ ! -f src/output.txt ]; then
+        if [ ! -f output.txt ]; then
           echo "Text output not generated!"
           exit 1
         fi
@@ -48,13 +48,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: text-output
-        path: src/output.txt
+        path: output.txt
 
     - name: Commit and Push Output to Repository
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add src/output.txt
+        git add output.txt
         git commit -m "Add generated text output file"
         git push origin main
       env:
