@@ -3,4 +3,3 @@
 उत्तरम्: 30
 "Difference:"
 उत्तरम्: 25
-"Namaste from the program!"
